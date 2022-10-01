@@ -49,8 +49,69 @@ function showSlides(n) {
 }
 
 // bottom........................
-var span=document.getElementsByTagName('span');
-    var div = document.getElementsByClassName ('imgbox');
+
+var span4=document.getElementsByClassName ('span4');
+    var div4 = document.getElementsByClassName ('imgbox');
+    var l=0;
+    span4[1].onclick=()=>{
+        l++;
+        for(var i of div4){
+            if(l==0){ i.style.left="0%";}
+            if(l==1){ i.style.left="-30%";}
+            if(l==2){ i.style.left="-60%";}
+            if(l==3){ i.style.left="-90%";}
+            if(l==4){ i.style.left="-120%";}
+            if(l>4){ l=4;}
+        }
+    }
+    span4[0].onclick=()=>{
+        l--;
+        for(var i of div4){
+            if(l==0){ i.style.left="0%";}
+            if(l==1){ i.style.left="-30%";}
+            if(l==2){ i.style.left="-60%";}
+            if(l==3){ i.style.left="-90%";}
+            
+            if(l<0){ l=0;}
+        }
+    }
+
+
+
+
+
+    var span2=document.getElementsByClassName ('span2');
+    var div1 = document.getElementsByClassName ('imgk');
+    var l=0;
+    span2[1].onclick=()=>{
+        l++;
+        for(var i of div1){
+            if(l==0){ i.style.left="0%";}
+            if(l==1){ i.style.left="-30%";}
+            if(l==2){ i.style.left="-60%";}
+            if(l==3){ i.style.left="-90%";}
+            if(l==4){ i.style.left="-120%";}
+            if(l>4){ l=4;}
+        }
+    }
+    span2[0].onclick=()=>{
+        l--;
+        for(var i of div1){
+            if(l==0){ i.style.left="0%";}
+            if(l==1){ i.style.left="-30%";}
+            if(l==2){ i.style.left="-60%";}
+            if(l==3){ i.style.left="-90%";}
+            
+            if(l<0){ l=0;}
+        }
+    }
+
+
+
+
+    // -----------------------------------
+    var span=document.getElementsByClassName ('span3');
+    var div = document.getElementsByClassName ('imgb');
     var l=0;
     span[1].onclick=()=>{
         l++;
@@ -74,6 +135,15 @@ var span=document.getElementsByTagName('span');
             if(l<0){ l=0;}
         }
     }
+
+
+    // ---------------------------------------query section
+    const faqs = document.querySelectorAll(".faq");
+    faqs.forEach((faq) =>{
+        faq.addEventListener("click",() =>{
+            faq.classList.toggle("active");
+        })
+    })
                
 
 
